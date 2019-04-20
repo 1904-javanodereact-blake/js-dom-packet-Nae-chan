@@ -72,12 +72,14 @@ function getCustomAttribute(){
 // If values cannot be added, put "Cannot add" in the <span> element
 <input type="number" oninput="sum(num1, num2)"></input>
 
-function sum (){
+function sum (num1, num2 ){
     const num1 = document.getElementById("num1").value;
     const num2 = document.getElementById("num2").value;
     totalSum = num1 + num2;
+    if (totalSum !== NaN) {
     document.getElementById("sum").value = totalSum;
-}
+    }else { console.log("Cannot add")};
+};
 
 // 7. Skills Event
 // NOTE: Write unobtrusive Javascript
